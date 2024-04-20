@@ -178,7 +178,7 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/cahyaw_nata/",
   },
   // {
   //   id: "social-media-2",
@@ -188,11 +188,11 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: github,
-    link: "https://www.twitter.com/",
+    link: "https://github.com/Cahyooo",
   },
   {
     id: "social-media-4",
     icon: linkedin,
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/cahya-winata-65007129b/",
   },
 ];

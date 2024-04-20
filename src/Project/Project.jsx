@@ -27,9 +27,9 @@ const Project = () => {
 
         return (
           <Fade direction={fadeDirection} key={index}>
-            <article key={index} className={`flex ${flexArea} font-poppins`}>
-              <img src={project.img} alt="" className="w-[65%] rounded-xl" />
-              <div className={`justify-start flex-1 ${margin} ${padding} `}>
+            <article key={index} className={`flex ${flexArea} font-poppins max-[900px]:flex-col`}>
+              <img src={project.img} alt="" className="w-[65%] object-contain rounded-xl max-[1050px]:rounded-3xl max-[900px]:w-[100%] max-[900px]:object-cover max-[900px]:rounded-xl" />
+              <div className={`justify-start flex-1 ${margin} ${padding} max-[900px]:mt-3 max-[900px]:mb-3`}>
                 <h1 className="font-bold text-[25px]">{project.title}</h1>
                 <h2 className="text-[20px] font-semibold mb-2">
                   {project.technologies}

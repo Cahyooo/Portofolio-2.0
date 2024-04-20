@@ -23,7 +23,7 @@ const Skills = () => {
               className="bg-[#05001F] w-[180px] h-[140px] flex flex-col justify-center items-center rounded-[20px] hover:bg-black transition shadow-lg shadow-black max-[900px]:w-[150px] max-[900px]:h-[110px] max-[460px]:w-[110px] max-[460px]:h-[90px] hover:scale-110 duration-500"
             >
               <img
-                src={`./public/img-skills/${skill.link}`}
+                src={`/img-skills/${skill.link}`}
                 alt={skill.link}
                 className="h-[70px] max-[900px]:h-[60px] max-[460px]:h-[40px]"
               />

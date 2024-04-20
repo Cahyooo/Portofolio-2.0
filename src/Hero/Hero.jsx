@@ -76,33 +76,33 @@ const Hero = () => {
           </a>
 
           <section className="flex gap-3 mt-5">
-            <a
-              href="https://www.instagram.com/cahyaw_nata/"
-              className="w-[45px] h-[45px] bg-[Rgb(9,1,27)] rounded-full items-center justify-center flex hover:bg-pink-500 transition"
+            <div
+              onClick= {() => window.open("https://www.instagram.com/cahyaw_nata/")}
+              className="w-[45px] h-[45px] bg-[Rgb(9,1,27)] rounded-full items-center justify-center flex hover:bg-pink-500 transition cursor-pointer"
               onMouseEnter={handleHoverInstagram}
               onMouseLeave={handleHoverInstagram}
             >
               <Instagram isHovered={isHoveredInstagram} />
               <span className="hidden">Instagram</span>
-            </a>
-            <a
-              href="https://github.com/Cahyooo"
-              className="w-[45px] h-[45px] bg-[Rgb(9,1,27)] rounded-full items-center justify-center flex hover:bg-black transition"
+            </div>
+            <div
+              onClick= {() => window.open("https://github.com/Cahyooo")}
+              className="w-[45px] h-[45px] bg-[Rgb(9,1,27)] rounded-full items-center justify-center flex hover:bg-black transition cursor-pointer"
               onMouseEnter={handlehoverGithub}
               onMouseLeave={handlehoverGithub}
             >
               <Github isHovered={isHoveredGithub} />
               <span className="hidden">Github</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/cahya-winata-65007129b/"
-              className="w-[45px] h-[45px] bg-[Rgb(9,1,27)] rounded-full items-center justify-center flex hover:bg-[#126BC4] transition"
+            </div>
+            <div
+              onClick= {() => window.open("https://www.linkedin.com/in/cahya-winata-65007129b/")}
+              className="w-[45px] h-[45px] bg-[Rgb(9,1,27)] rounded-full items-center justify-center flex hover:bg-[#126BC4] transition cursor-pointer"
               onMouseEnter={handlehoverLinkedin}
               onMouseLeave={handlehoverLinkedin}
             >
               <Linkedin isHovered={isHoveredLinkedin} />
               <span className="hidden">Linkedin</span>
-            </a>
+            </div>
           </section>
         </Fade>
       </div>
