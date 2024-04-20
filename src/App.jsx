@@ -15,7 +15,7 @@ const App = () => (
       <img
         src={logo}
         alt="Logo Cahya"
-        className="w-[150px] h-[152px] fixed top-[-35px] left-10 z-[51]"
+        className="w-[150px] h-[152px] fixed top-[-35px] left-10 z-[51] max-[770px]:left-1"
       />
     </a>
     <div className={`${styles.flexCenter}`}>

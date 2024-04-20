@@ -42,24 +42,48 @@ const Hero = () => {
     };
   }, []);
 
+  const [width, setWidth] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      // console.log(`Lebar Layar Baru: ${window.innerWidth}`); // Cetak log ke konsol
+      if (window.innerWidth <= 620) {
+        setWidth(true)
+      } else {
+        setWidth(false)
+      }
+    };
+  
+    window.addEventListener('resize', handleResize); // Tambahkan event listener 'resize'
+    window.addEventListener('load', handleResize); 
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', handleResize);
+    };
+  }, []); 
+  
+
   return (
     <section
       id="home"
-      className={`flex md:flex-row flex-col ${styles.paddingY} min-[1060px]:pt-32  mb-20 px-0 md:px-[3vw]`}
+      className={`flex md:flex-row flex-col ${styles.paddingY} min-[1060px]:pt-32  mb-20 px-0 md:px-[3vw] max-[770px]:mt-10`}
     >
       <div
-        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:pl-16 px-6 pr-0`}
       >
         <Fade direction="down">
           <div className="flex flex-row justify-between items-center w-full mb-5">
             <div className="flex-1 font-poppins font-semibold ss:text-[50px] text-[52px] text-white">
-              <h2 className="h-auto">Hi There</h2>
-              <h2>
+              <h2 className="h-auto">Hi There,</h2>
+              <h2 className="max-[520px]:text-[45px]">
                 I'm <span className="text-gradient">Cahya Winata</span>
               </h2>
-              <h2 className="ss:text-[30px]">
+              
+              <h2 className="ss:text-[30px] max-[620px]:text-[40px]">
                 I Am Into
-                <span className="text-gradient ml-3" ref={el}></span>{" "}
+                {width ? <br /> : null}
+                <span className="text-gradient ml-3 max-[620px]:ml-0 max-[620px]:w-[100vw]" ref={el}></span>{" "}
               </h2>
             </div>
           </div>
@@ -111,7 +135,7 @@ const Hero = () => {
         <div
           className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
         >
-          <img src={programming} alt="Programming" />
+          <img src={programming} alt="Programming"/>
 
           {/* gradient start */}
           <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
